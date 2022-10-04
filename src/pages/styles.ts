@@ -17,8 +17,20 @@ export const Container = styled.div`
        align-items: center;
        gap: 11px;
        cursor: pointer;
+
+       :hover{
+            .material-symbols-outlined{
+                -webkit-animation: rotating 2s linear infinite;
+                -moz-animation: rotating 2s linear infinite;
+                -ms-animation: rotating 2s linear infinite;
+                -o-animation: rotating 2s linear infinite;
+                animation: rotating 2s linear infinite;
+            }
+       }
+       
     }
 }
+     
 
 .quoteContainer{
     position: absolute;
@@ -48,6 +60,7 @@ export const Container = styled.div`
         align-items: center;
         padding: 0 29px;
         cursor: pointer;
+        transition: all 0.2s ease-in;
 
         .quoteInfos{
         display: flex;

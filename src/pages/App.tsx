@@ -23,9 +23,6 @@ export const App = (props: App) =>{
     getQuote()
   }
 
-
-  console.log(randomQuote)
-
   useEffect(() => {
     getQuote()
   }, [getQuote])
