@@ -20,23 +20,43 @@ export const App = (props: App) =>{
   }, [])
 
   function handleRandomQuote(){
-
+    getQuote()
   }
 
+
+  console.log(randomQuote)
 
   useEffect(() => {
     getQuote()
   }, [getQuote])
 
-  console.log(randomQuote)
-
-
   return(
     <Container>
+      <div className='randomButtonContainer'>
+      <button type='button' onClick={handleRandomQuote}>
+        random
+      <span className="material-symbols-outlined">
+        autorenew
+      </span>
+      </button>
+      </div>
       {quotes && ( 
-          <div>
+          <div className='quoteContainer'>
           <p>"{randomQuote.quoteText}"</p>
-          <p>{randomQuote.quoteAuthor}</p>
+
+          <button 
+            type='button'
+            className='quoteAuthor'
+           >
+            <div className='quoteInfos'>
+            <span className='quoteAuthor'>{randomQuote.quoteAuthor}</span>
+            <span className='quoteGenre'>{randomQuote.quoteGenre}</span>
+            </div>
+            <span className="material-symbols-outlined" style={{color: "white"}}>
+            arrow_forward
+            </span>
+           </button>
+
           </div>
         )}
     </Container>
