@@ -37,6 +37,11 @@ export const Container = styled.div`
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    
+    .quoteTextContainer{
+        border-left: 8px solid #F7DF94;
+        padding-left: 40px;
+    }
 
     p{
         width: 100%;

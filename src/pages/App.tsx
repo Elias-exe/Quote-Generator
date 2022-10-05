@@ -39,7 +39,10 @@ export const App = (props: App) =>{
       </div>
       {quotes && ( 
           <div className='quoteContainer'>
-          <p>"{randomQuote.quoteText}"</p>
+            <div className='quoteTextContainer'>
+              <p>"{randomQuote.quoteText}"</p>
+            </div>
+          
 
           <button 
             type='button'
